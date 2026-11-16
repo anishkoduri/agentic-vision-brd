@@ -22,7 +22,7 @@ The batch has been run on all 1,749 clips. The ranker has been run on that outpu
 | Demo video, captions only | [`challenge2-video/out/demo.mp4`](challenge2-video/out/demo.mp4) |
 | Data manifest | [`docs/data-manifest.md`](docs/data-manifest.md) |
 | Result tables: [`activity.csv`](outputs/batch/activity.csv), [`brd_risk.csv`](outputs/batch/brd_risk.csv), [`time_budgets.csv`](outputs/batch/time_budgets.csv), [`time_budgets_by_camera.csv`](outputs/batch/time_budgets_by_camera.csv), [`empty_clips.txt`](outputs/batch/empty_clips.txt), reasoning traces ([`success`](outputs/batch/traces/success.md), [`failure`](outputs/batch/traces/failure.md), [`night`](outputs/batch/traces/night.md)), ID-check [`index.csv`](outputs/batch/id-checks/index.csv) | `outputs/batch/` |
-| Full submission package, including the 283 ID-check stills (not in the repo) | `Challenge2-submission.zip` (supplied with the submission; the stills are only in the ZIP) |
+| Full submission package, including the 283 ID-check stills (about 191 MB; the stills are only in the ZIP) | [`Challenge2-submission.zip`](https://github.com/anishkoduri/agentic-vision-brd/releases/download/v1.0.0/Challenge2-submission.zip) ([release v1.0.0](https://github.com/anishkoduri/agentic-vision-brd/releases/tag/v1.0.0)) |
 
 ## Verify the results
 
@@ -51,6 +51,8 @@ Run from the repo root in PowerShell, after the venv and install steps under "Ru
 5. The full 1,749-clip run is about 17 hours on a single laptop (estimated from timing one clip at 34.8 s), so the repo ships the completed outputs (`activity.csv`, `brd_risk.csv`, the time budgets, the traces, and the ID-check index). The steps above verify those outputs rather than re-running the batch.
 
 ## Demo video
+
+[![Demo preview: a few seconds of the narrated walkthrough. Click to open the full video.](docs/demo-preview.gif)](challenge2-video/out/demo-voiced.mp4)
 
 [`challenge2-video/out/demo-voiced.mp4`](challenge2-video/out/demo-voiced.mp4) is a 54-second narrated walkthrough of `docs/visualization.html`: the herd day-over-day comparison, feeding share by hour (the Day 2 midday drop), and the most anomalous tracklets from `docs/anomaly-report.md`. The narration is an ElevenLabs voice (George) laid over the captions; there is no music.
 

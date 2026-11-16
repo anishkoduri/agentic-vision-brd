@@ -18,4 +18,4 @@ Reviewer note (made after the run, not part of the pipeline): `frames/Event20261
 
 **VLM.** The VLM (Qwen2.5-VL-3B) was NOT invoked: its weights were not available on this machine. Verification used the tracker's box confidence plus the 3 fps temporal re-examination instead.
 
-**Caveat.** The tracker is reset before each pass (`track_frames` in src/detect.py), so the window's track numbers are issued again; the second read is matched to the first by track number and minute, not by a verified identity. Both rows stay in activity.csv. Nothing here is a diagnosis.
+**Caveat.** The tracker is reset before each pass (`track_frames` in src/detect.py), so the window's track numbers are issued again; the second read is matched to the first by track number and minute, not by a verified identity. Only the second-look row stays in activity.csv (the coarse row was dropped by dedup). Nothing here is a diagnosis.

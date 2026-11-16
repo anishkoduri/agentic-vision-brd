@@ -107,7 +107,7 @@ def trace_body(kind: str, pair: dict) -> dict:
         "caveat": (
             "The tracker is reset before each pass (`track_frames` in src/detect.py), so the window's track numbers are issued again; the second read is "
             "matched to the first by track number and minute, not by a verified identity. "
-            "Both rows stay in activity.csv. Nothing here is a diagnosis."
+            "Only the second-look row stays in activity.csv (the coarse row was dropped by dedup). Nothing here is a diagnosis."
         ),
     }
 
