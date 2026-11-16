@@ -1,3 +1,5 @@
+> **Status after the run (Nov 15, 2026):** this is the pre-run plan. Shipped results are in README.md, docs/technical-brief.md, and docs/final-report.md — RTX 4060 (not 4070), 24,327 rows (not 28,800), no per-cow rank, no dashboard, VLM not run, Level 3 is a design only.
+
 # Expansion — planner pass
 
 Phases 0–3. Lenses: [demo impact](9655e7d2-4bac-4993-af39-9c0d60cd3c13), [depth](0c520028-857e-4199-abbc-bce4174f4f95), [bold bets](42b4e6c6-d958-48ce-a5c8-73b9e82dee5f), [memorable moments](61fee19c-be9d-4c6c-8a82-8450bcbea133). Lists also in `.hackathon/lens-a.md`, `lens-b.md`, `lens-c.md`. Lens D was taken from its finished return.

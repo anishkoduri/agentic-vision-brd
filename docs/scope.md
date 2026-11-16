@@ -1,8 +1,10 @@
+> **Status after the run (Nov 15, 2026):** this is the pre-run plan. Shipped results are in README.md, docs/technical-brief.md, and docs/final-report.md — RTX 4060 (not 4070), 24,327 rows (not 28,800), no per-cow rank, no dashboard, VLM not run, Level 3 is a design only.
+
 # Scope — Pen 6 agentic vision
 
 Source: `docs/decision-record.md`. Hours-left: **20** (package by Sunday Nov 15, 2026, 4:00 PM CST). Official slack until 11:00 PM CST is not scheduled work.
 
-Platform: responsive web dashboard (Next.js + FastAPI) plus a local Python batch on the Windows laptop (RTX 4070, 8 GB). The prompt asked for this web dashboard. No native-app conversion.
+Platform: responsive web dashboard (Next.js + FastAPI) plus a local Python batch on the Windows laptop (RTX 4060 Laptop, 8 GB). The prompt asked for this web dashboard. No native-app conversion.
 
 Design direction: Restrained agricultural. Closest Hallmark catalog theme, name recorded when the theme deal runs. Dense operational dashboard. Observed and estimated stay visually distinct. “Not visible” stays honest. Fraunces is body-only, never the main visible text.
 

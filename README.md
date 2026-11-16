@@ -21,7 +21,8 @@ The batch has been run on all 1,749 clips. The ranker has been run on that outpu
 | Demo video, narrated (54 s) | [`challenge2-video/out/demo-voiced.mp4`](challenge2-video/out/demo-voiced.mp4) |
 | Demo video, captions only | [`challenge2-video/out/demo.mp4`](challenge2-video/out/demo.mp4) |
 | Data manifest | [`docs/data-manifest.md`](docs/data-manifest.md) |
-| Result tables: `activity.csv`, `brd_risk.csv`, time budgets, traces, ID-check stills | `outputs/batch/` (in `Challenge2-submission.zip`; not in the GitHub repo) |
+| Result tables: [`activity.csv`](outputs/batch/activity.csv), [`brd_risk.csv`](outputs/batch/brd_risk.csv), [`time_budgets.csv`](outputs/batch/time_budgets.csv), [`time_budgets_by_camera.csv`](outputs/batch/time_budgets_by_camera.csv), [`empty_clips.txt`](outputs/batch/empty_clips.txt), reasoning traces ([`success`](outputs/batch/traces/success.md), [`failure`](outputs/batch/traces/failure.md), [`night`](outputs/batch/traces/night.md)), ID-check [`index.csv`](outputs/batch/id-checks/index.csv) | `outputs/batch/` |
+| Full submission package, including the 283 ID-check stills (not in the repo) | `Challenge2-submission.zip` (supplied with the submission; the stills are only in the ZIP) |
 
 ## Demo video
 
@@ -40,7 +41,7 @@ On Day 2 the herd's feeding share fell sharply at midday: at 13 h it went from 2
 | Rubric item | What this submission has | Honest limit |
 | --- | --- | --- |
 | **Behavior accuracy** | One behavior label per track per minute: 24,327 rows across 1,749 clips (standing 13,659; lying 8,193; feeding 1,382; walking 1,093). | Only 4 of the spec's 10 behavior classes are detected. Labels are a geometric rule on the box, not ground truth, and no labeled accuracy was measured, so none is stated. |
-| **Cow identification** | Clip-local tracker labels (`Cam 03-t1`); every row says which clip it came from. | No identity survives across clips, so no cow IDs are claimed and 0 of 9,750 tracks were given both days. |
+| **Cow identification** | Clip-local tracker labels (`Cam 03-t1`); every row says which clip it came from. | No identity survives across clips, so no cow IDs are claimed and 0 of 9,750 tracks appear on both days. |
 | **Agent loop (tools, checks itself)** | Tools: FFmpeg and OpenCV, YOLO11-small, ByteTrack. A box under 0.45 confidence triggers a 3 fps re-look (1,113 clips). Three traces follow one re-examined minute through Observe, Question, Verify, Revise (success, failure, night). | The vision-language model (Qwen2.5-VL-3B) was not run, so the check is tracker confidence plus the re-look. |
 | **Biologically sensible behavioral features** | Feeding, lying, standing, walking; day and night time budgets; share by hour of day. Feed intake is read first because reduced intake is an early sign of BRD. | Feeding is labeled only on the front cameras, so a pooled feeding share is diluted by back-camera tracks. |
 | **Explanations backed by video clips** | `docs/risk-cards.md` names the source clip, camera, day, and minute for each anomalous tracklet, with a veterinary reading. `top_reasons` in `brd_risk.csv` holds each tracklet's observed features against the herd. ID-check stills: 283 of 288 slots. | The event clips are not redistributed, so the evidence points at clips by name. |
@@ -81,7 +82,7 @@ Tracker ids are per clip. `Cam 03-t1` in the next clip is a new track, not the s
 | Clips with no cow box | 604 (listed in `outputs/batch/empty_clips.txt`, not filled) |
 | Activity rows | 24,327 track-minutes (one row per track per minute) |
 | Behaviors | standing 13,659; lying 8,193; feeding 1,382; walking 1,093 |
-| Tracks given both days | 0 of 9,750 |
+| Tracks on both days | 0 of 9,750 |
 | Cows singled out | 0 |
 | Extra 3 fps windows | 1,113 clips |
 | ID stills | 283 of 288 slots; 5 slots have no clip and are listed in `outputs/batch/id-checks/index.csv` as "no covering clip — frame not available" |

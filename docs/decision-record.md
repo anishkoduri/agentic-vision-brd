@@ -1,3 +1,5 @@
+> **Status after the run (Nov 15, 2026):** this is the pre-run plan. Shipped results are in README.md, docs/technical-brief.md, and docs/final-report.md — RTX 4060 (not 4070), 24,327 rows (not 28,800), no per-cow rank, no dashboard, VLM not run, Level 3 is a design only.
+
 # Decision record — Agentic Vision for Angus Behavior and BRD Prediction
 
 Merck–TAMU Animal Science Hackathon 2026, Challenge 2.

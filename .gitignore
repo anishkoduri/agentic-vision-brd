@@ -1,5 +1,16 @@
 data/
-outputs/
+outputs/*
+!outputs/batch/
+outputs/batch/*
+!outputs/batch/activity.csv
+!outputs/batch/brd_risk.csv
+!outputs/batch/time_budgets.csv
+!outputs/batch/time_budgets_by_camera.csv
+!outputs/batch/empty_clips.txt
+!outputs/batch/traces/
+!outputs/batch/id-checks/
+outputs/batch/id-checks/*
+!outputs/batch/id-checks/index.csv
 checkpoints/
 frames/
 *.crdownload

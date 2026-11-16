@@ -1,0 +1,59 @@
+day,camera,part,behavior,track_minutes,n_tracks,mean_minutes_per_track
+1,back_cam,day,lying,1947,2275,0.8558
+1,back_cam,day,standing,4007,2275,1.7613
+1,back_cam,day,walking,99,2275,0.0435
+1,back_cam,night,lying,1285,853,1.5064
+1,back_cam,night,standing,912,853,1.0692
+1,back_cam,night,walking,123,853,0.1442
+1,front_cam_1,day,feeding,871,1895,0.4596
+1,front_cam_1,day,lying,953,1895,0.5029
+1,front_cam_1,day,standing,2495,1895,1.3166
+1,front_cam_1,day,walking,183,1895,0.0966
+1,front_cam_1,night,feeding,12,84,0.1429
+1,front_cam_1,night,lying,14,84,0.1667
+1,front_cam_1,night,standing,83,84,0.9881
+1,front_cam_1,night,walking,12,84,0.1429
+1,front_cam_2,day,feeding,9,710,0.0127
+1,front_cam_2,day,lying,177,710,0.2493
+1,front_cam_2,day,standing,1089,710,1.5338
+1,front_cam_2,day,walking,240,710,0.338
+1,front_cam_2,night,lying,58,133,0.4361
+1,front_cam_2,night,standing,126,133,0.9474
+1,front_cam_2,night,walking,37,133,0.2782
+2,back_cam,day,lying,2113,1830,1.1546
+2,back_cam,day,standing,2914,1830,1.5923
+2,back_cam,day,walking,61,1830,0.0333
+2,back_cam,night,lying,790,464,1.7026
+2,back_cam,night,standing,481,464,1.0366
+2,back_cam,night,walking,46,464,0.0991
+2,front_cam_1,day,feeding,467,1030,0.4534
+2,front_cam_1,day,lying,699,1030,0.6786
+2,front_cam_1,day,standing,1053,1030,1.0223
+2,front_cam_1,day,walking,111,1030,0.1078
+2,front_cam_1,night,feeding,19,83,0.2289
+2,front_cam_1,night,lying,45,83,0.5422
+2,front_cam_1,night,standing,43,83,0.5181
+2,front_cam_1,night,walking,28,83,0.3373
+2,front_cam_2,day,feeding,4,270,0.0148
+2,front_cam_2,day,lying,62,270,0.2296
+2,front_cam_2,day,standing,318,270,1.1778
+2,front_cam_2,day,walking,106,270,0.3926
+2,front_cam_2,night,lying,50,130,0.3846
+2,front_cam_2,night,standing,138,130,1.0615
+2,front_cam_2,night,walking,47,130,0.3615
+1,all_cameras (HERD_AVERAGE),day,feeding,880,4880,0.1803
+1,all_cameras (HERD_AVERAGE),day,lying,3077,4880,0.6305
+1,all_cameras (HERD_AVERAGE),day,standing,7591,4880,1.5555
+1,all_cameras (HERD_AVERAGE),day,walking,522,4880,0.107
+1,all_cameras (HERD_AVERAGE),night,feeding,12,1070,0.0112
+1,all_cameras (HERD_AVERAGE),night,lying,1357,1070,1.2682
+1,all_cameras (HERD_AVERAGE),night,standing,1121,1070,1.0477
+1,all_cameras (HERD_AVERAGE),night,walking,172,1070,0.1607
+2,all_cameras (HERD_AVERAGE),day,feeding,471,3130,0.1505
+2,all_cameras (HERD_AVERAGE),day,lying,2874,3130,0.9182
+2,all_cameras (HERD_AVERAGE),day,standing,4285,3130,1.369
+2,all_cameras (HERD_AVERAGE),day,walking,278,3130,0.0888
+2,all_cameras (HERD_AVERAGE),night,feeding,19,677,0.0281
+2,all_cameras (HERD_AVERAGE),night,lying,885,677,1.3072
+2,all_cameras (HERD_AVERAGE),night,standing,662,677,0.9778
+2,all_cameras (HERD_AVERAGE),night,walking,121,677,0.1787

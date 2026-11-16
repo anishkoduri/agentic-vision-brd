@@ -1,0 +1,33 @@
+{
+  "kind": "success",
+  "a_clip": {
+    "file": "Event20261108085125006.Avi",
+    "camera": "front_cam_1",
+    "day": 2,
+    "minute_of_day": 531,
+    "clock": "08:51",
+    "track": "Cam 01-t1 (clip-local, not a cow ID)"
+  },
+  "b_observe": {
+    "label": "feeding",
+    "confidence": 0.192,
+    "source": "coarse pass: one 640x480 frame every 10 s, YOLO11-small + ByteTrack, geometric label"
+  },
+  "c_question": "This minute's confidence (0.192) is under the 0.45 trigger. Is 'feeding' the right label for this minute, or was the box too weak to say?",
+  "d_verify": {
+    "tool": "higher-FPS re-examination window (3 fps, 4 s, tracker re-run on those frames)",
+    "window_start": "at 0 s, the start of the clip",
+    "window_frames": 12,
+    "trigger": "a box under 0.45 in the coarse pass",
+    "tools_not_used": "zoom/crop, cross-camera retrieval, a look-back or look-forward outside the 4 s window"
+  },
+  "e_revise": {
+    "label": "feeding",
+    "confidence": 0.8084,
+    "label_changed": false
+  },
+  "f_learned": "The second look kept the label and moved confidence from 0.192 to 0.808 (+0.616), so the weak first read was a detection-quality problem, not a wrong label.",
+  "reviewer_note": "Reviewer note (made after the run, not part of the pipeline): `frames/Event20261108085125006-dense-0/d0006.jpg` shows animals at the bunk rail in the lower part of the frame, which fits the feeding label.",
+  "vlm": "The VLM (Qwen2.5-VL-3B) was NOT invoked: its weights were not available on this machine. Verification used the tracker's box confidence plus the 3 fps temporal re-examination instead.",
+  "caveat": "The tracker is reset before each pass (`track_frames` in src/detect.py), so the window's track numbers are issued again; the second read is matched to the first by track number and minute, not by a verified identity. Both rows stay in activity.csv. Nothing here is a diagnosis."
+}
