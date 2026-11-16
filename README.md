@@ -24,6 +24,32 @@ The batch has been run on all 1,749 clips. The ranker has been run on that outpu
 | Result tables: [`activity.csv`](outputs/batch/activity.csv), [`brd_risk.csv`](outputs/batch/brd_risk.csv), [`time_budgets.csv`](outputs/batch/time_budgets.csv), [`time_budgets_by_camera.csv`](outputs/batch/time_budgets_by_camera.csv), [`empty_clips.txt`](outputs/batch/empty_clips.txt), reasoning traces ([`success`](outputs/batch/traces/success.md), [`failure`](outputs/batch/traces/failure.md), [`night`](outputs/batch/traces/night.md)), ID-check [`index.csv`](outputs/batch/id-checks/index.csv) | `outputs/batch/` |
 | Full submission package, including the 283 ID-check stills (not in the repo) | `Challenge2-submission.zip` (supplied with the submission; the stills are only in the ZIP) |
 
+## Verify the results
+
+Run from the repo root in PowerShell, after the venv and install steps under "Run locally".
+
+1. **Unit tests** (expect 33 pass, 1 skip):
+
+   ```powershell
+   .\.venv\Scripts\python.exe -m unittest tests.test_risk tests.test_behavior tests.test_probe tests.test_remux tests.test_evidence tests.test_hourly tests.test_traces tests.test_dedupe
+   ```
+
+2. **Row count** (expect 24,327, one per clip, track, and minute):
+
+   ```powershell
+   .\.venv\Scripts\python.exe -c "import csv; print(sum(1 for _ in csv.DictReader(open('outputs/batch/activity.csv', encoding='utf-8'))))"
+   ```
+
+3. **Render the brief** (expect `words=982`, 11pt pages=2, 12pt pages=2; uses headless Edge):
+
+   ```powershell
+   .\.venv\Scripts\python.exe scripts\render_brief.py
+   ```
+
+4. **Open `docs/visualization.html`** in a browser to see the behavior distribution, time budgets by camera, herd day-over-day, and feeding-by-hour charts. The most anomalous tracklets are in a table in `docs/anomaly-report.md`, not in this page.
+
+5. The full 1,749-clip run is about 17 hours on a single laptop (estimated from timing one clip at 34.8 s), so the repo ships the completed outputs (`activity.csv`, `brd_risk.csv`, the time budgets, the traces, and the ID-check index). The steps above verify those outputs rather than re-running the batch.
+
 ## Demo video
 
 [`challenge2-video/out/demo-voiced.mp4`](challenge2-video/out/demo-voiced.mp4) is a 54-second narrated walkthrough of `docs/visualization.html`: the herd day-over-day comparison, feeding share by hour (the Day 2 midday drop), and the most anomalous tracklets from `docs/anomaly-report.md`. The narration is an ElevenLabs voice (George) laid over the captions; there is no music.
