@@ -22,7 +22,7 @@ The batch has been run on all 1,749 clips. The ranker has been run on that outpu
 | Demo video, captions only | [`challenge2-video/out/demo.mp4`](challenge2-video/out/demo.mp4) |
 | Data manifest | [`docs/data-manifest.md`](docs/data-manifest.md) |
 | Result tables: [`activity.csv`](outputs/batch/activity.csv), [`brd_risk.csv`](outputs/batch/brd_risk.csv), [`time_budgets.csv`](outputs/batch/time_budgets.csv), [`time_budgets_by_camera.csv`](outputs/batch/time_budgets_by_camera.csv), [`empty_clips.txt`](outputs/batch/empty_clips.txt), reasoning traces ([`success`](outputs/batch/traces/success.md), [`failure`](outputs/batch/traces/failure.md), [`night`](outputs/batch/traces/night.md)), ID-check [`index.csv`](outputs/batch/id-checks/index.csv) | `outputs/batch/` |
-| Full submission package, including the 283 ID-check stills (about 191 MB; the stills are only in the ZIP) | [`Challenge2-submission.zip`](https://github.com/anishkoduri/agentic-vision-brd/releases/download/v1.0.0/Challenge2-submission.zip) ([release v1.0.0](https://github.com/anishkoduri/agentic-vision-brd/releases/tag/v1.0.0)) |
+| Full submission package, including the 283 ID-check stills (about 193 MB; the stills are only in the ZIP) | [`Challenge2-submission.zip`](https://github.com/anishkoduri/agentic-vision-brd/releases/download/v1.0.0/Challenge2-submission.zip) ([release v1.0.0](https://github.com/anishkoduri/agentic-vision-brd/releases/tag/v1.0.0)) |
 
 ## Verify the results
 
