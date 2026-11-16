@@ -1,0 +1,7 @@
+opencv-python-headless==5.0.0.93
+static-ffmpeg==3.0
+# torch and torchvision are the cu128 wheels, installed with:
+# pip install torch torchvision --index-url https://download.pytorch.org/whl/cu128
+torch==2.11.0+cu128
+torchvision==0.26.0+cu128
+ultralytics==8.4.213

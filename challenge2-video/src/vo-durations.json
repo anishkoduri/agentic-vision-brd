@@ -1,0 +1,63 @@
+{
+  "gapMs": 300,
+  "narration": "none",
+  "musicBed": false,
+  "shots": [
+    {
+      "id": "hook",
+      "kind": "card",
+      "say": "Ten Angus cows. Two days. Three cameras. One thousand seven hundred forty-nine clips.",
+      "dur": 5.2,
+      "hasAudio": false
+    },
+    {
+      "id": "pipeline",
+      "kind": "app",
+      "say": "We built a vision pipeline that watches the pen around the clock, detects what each cow is doing, and looks for the early signs of respiratory disease.",
+      "dur": 10.8,
+      "hasAudio": false
+    },
+    {
+      "id": "found",
+      "kind": "app",
+      "say": "Here's what it found.",
+      "dur": 2,
+      "hasAudio": false
+    },
+    {
+      "id": "drop",
+      "kind": "app",
+      "say": "On day two, feeding fell sharply at midday — at one PM, from twenty-seven percent to under one percent — while lying time rose.",
+      "dur": 9.6,
+      "hasAudio": false
+    },
+    {
+      "id": "pattern",
+      "kind": "app",
+      "say": "Less eating, more lying. That's a pattern a veterinarian would investigate first.",
+      "dur": 4.8,
+      "hasAudio": false
+    },
+    {
+      "id": "honest",
+      "kind": "app",
+      "say": "We could not identify individual cows across clips, so we report the herd signal honestly instead of inventing a ranking.",
+      "dur": 8,
+      "hasAudio": false
+    },
+    {
+      "id": "arch",
+      "kind": "card",
+      "say": "All of it ran on a single laptop, no cloud.",
+      "dur": 4,
+      "hasAudio": false
+    },
+    {
+      "id": "close",
+      "kind": "card",
+      "say": "The full evidence is in the technical brief and the repository.",
+      "dur": 4.4,
+      "hasAudio": false
+    }
+  ]
+}

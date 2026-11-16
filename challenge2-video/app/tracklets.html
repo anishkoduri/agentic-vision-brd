@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Pen 6 — Anomaly tracklets</title><style>
+:root{--ink:#2b2a24;--muted:#5c5a50;--paper:#f4f0e6;--card:#fbf8f0;--line:#d8d2c0}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.09'/%3E%3C/svg%3E");color:var(--ink);
+font-family:Fraunces,Georgia,'Times New Roman',serif;line-height:1.5}
+main{max-width:880px;margin:0 auto;padding:32px 20px 56px}
+h1{font-size:2rem;margin:0 0 4px;letter-spacing:-.01em}
+.sub{color:var(--muted);margin:0 0 24px}
+.card{background:var(--card) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.09'/%3E%3C/svg%3E");border:1px solid var(--line);border-radius:10px;
+padding:20px 22px;margin:0 0 20px;box-shadow:0 1px 0 #fff inset,0 6px 16px -10px rgba(60,50,30,.35)}
+h2{font-size:1.15rem;margin:0 0 4px}
+.note{color:var(--muted);font-size:.9rem;margin:0 0 12px}
+svg{width:100%;height:auto;display:block}
+table{border-collapse:collapse;width:100%;font-size:.88rem;margin-top:12px}
+th,td{text-align:right;padding:5px 8px;border-bottom:1px solid var(--line)}
+th:first-child,td:first-child{text-align:left}
+.warn{border-left:4px solid #b04a28;}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+main{max-width:1180px} table{font-size:1rem} th,td{text-align:left;padding:9px 10px}</style></head><body><main>
+<h1>Pen 6 — Top anomaly tracklets</h1>
+<p class="sub">From docs/anomaly-report.md, section 2. Each row is one tracker number inside one clip.</p>
+<section class="card warn"><h2>Clip-level evidence only</h2>
+<p class="note" style="margin:0">A track number is clip-local, not a cow ID. Tracklets are not linked across clips or days,
+no individual cow is identified or ordered, and a deviation is not a diagnosis.</p></section>
+<section class="card"><h2>Tracklets that deviate most from the herd mean for their camera and day</h2>
+<table id="tracklets"><tr><th>#</th><th>Clip</th><th>Camera</th><th>Day</th><th>First minute of behavior</th><th>Track no.</th><th>Behavior</th><th>Tracklet share</th><th>Herd mean</th><th>Deviation (z)</th></tr><tr><td>1</td><td>Event20261108033052003.Avi</td><td>back_cam</td><td>2</td><td>03:31</td><td>1</td><td>walking</td><td>50% of 4 min</td><td>0.6%</td><td>+11.0</td></tr><tr><td>2</td><td>Event20261108142134003.Avi</td><td>back_cam</td><td>2</td><td>14:23</td><td>10</td><td>walking</td><td>50% of 4 min</td><td>0.6%</td><td>+11.0</td></tr><tr><td>3</td><td>Event20261108043056003.Avi</td><td>back_cam</td><td>2</td><td>04:33</td><td>1</td><td>walking</td><td>50% of 4 min</td><td>0.6%</td><td>+11.0</td></tr><tr><td>4</td><td>Event20261107094945003.Avi</td><td>back_cam</td><td>1</td><td>09:51</td><td>6</td><td>walking</td><td>50% of 4 min</td><td>1.3%</td><td>+8.7</td></tr><tr><td>5</td><td>Event20261107135022017.Avi</td><td>front_cam_2</td><td>1</td><td>13:50</td><td>2</td><td>feeding</td><td>75% of 4 min</td><td>1.5%</td><td>+8.2</td></tr><tr><td>6</td><td>Event20261107090952006.Avi</td><td>front_cam_1</td><td>1</td><td>09:11</td><td>20</td><td>walking</td><td>75% of 4 min</td><td>2.5%</td><td>+8.0</td></tr><tr><td>7</td><td>Event20261107094445003.Avi</td><td>back_cam</td><td>1</td><td>09:47</td><td>6</td><td>walking</td><td>40% of 5 min</td><td>1.3%</td><td>+6.9</td></tr><tr><td>8</td><td>Event20261107062931003.Avi</td><td>back_cam</td><td>1</td><td>06:32</td><td>5</td><td>walking</td><td>40% of 5 min</td><td>1.3%</td><td>+6.9</td></tr><tr><td>9</td><td>Event20261108162543006.Avi</td><td>front_cam_1</td><td>2</td><td>16:26</td><td>5</td><td>walking</td><td>50% of 4 min</td><td>1.7%</td><td>+6.2</td></tr><tr><td>10</td><td>Event20261108101130006.Avi</td><td>front_cam_1</td><td>2</td><td>10:13</td><td>10</td><td>walking</td><td>50% of 4 min</td><td>1.7%</td><td>+6.2</td></tr></table></section>
+</main></body></html>

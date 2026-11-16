@@ -1,0 +1,275 @@
+{
+  "brand": "Pen 6 — Challenge 2",
+  "tagline": "The full evidence is in the technical brief and the repository.",
+  "features": [
+    {
+      "name": "Herd day-over-day behavior change",
+      "beat": "found"
+    },
+    {
+      "name": "Feeding share by hour (Day 2 midday drop, 12–13h)",
+      "beat": "drop"
+    },
+    {
+      "name": "Top anomaly tracklets",
+      "beat": "honest"
+    }
+  ],
+  "cuts": [
+    {
+      "name": "Per-cow BRD risk ranking (scope wow: rank-1 bunk change)",
+      "reason": "not built: no cross-clip identity, so there is nothing true to film; the video says so in the 'honest' beat"
+    },
+    {
+      "name": "Activity log, ID-check stills, agent traces, risk cards",
+      "reason": "user asked for a short three-chart repo video; these are linked from the README instead"
+    }
+  ],
+  "theme": {
+    "source": "docs/visualization.html :root tokens (--ink #2b2a24, --muted #5c5a50, --paper #f4f0e6, --card #fbf8f0, --line #d8d2c0), feeding-bar green #4f7a37, .warn border #b04a28",
+    "vignette": 0,
+    "colors": {
+      "bg": "#f4f0e6",
+      "bgDeep": "#ebe5d6",
+      "card": "#fbf8f0",
+      "line": "#d8d2c0",
+      "lineStrong": "#b9b19a",
+      "text": "#2b2a24",
+      "textSoft": "#3a382f",
+      "textMuted": "#5c5a50",
+      "accent": "#4f7a37",
+      "accent2": "#b04a28",
+      "accent3": "#5c5a50",
+      "captionBg": "rgba(43,42,36,0.88)",
+      "captionText": "#fbf8f0"
+    },
+    "fonts": {
+      "sans": "\"Hanken Grotesk\"",
+      "serif": "\"Instrument Serif\"",
+      "mono": "\"JetBrains Mono\""
+    }
+  },
+  "tts": {
+    "provider": "elevenlabs",
+    "voice": "21m00Tcm4TlvDq8ikWAM",
+    "model": "eleven_multilingual_v2",
+    "speed": 1,
+    "piperModel": "en_US-lessac-medium"
+  },
+  "gapMs": 300,
+  "app": {
+    "url": "http://localhost:5180",
+    "devCommand": "node challenge2-video/scripts/serve.mjs {port}",
+    "width": 1920,
+    "height": 1080,
+    "bg": "#f4f0e6",
+    "colorScheme": "light"
+  },
+  "textSwaps": [],
+  "cards": {
+    "hook": {
+      "accent": "#4f7a37"
+    },
+    "arch": {
+      "title": "One laptop, no cloud",
+      "nodes": [
+        {
+          "label": "Pen video",
+          "note": "three cameras, two days",
+          "kind": "in"
+        },
+        {
+          "label": "Detector",
+          "note": "finds each cow in the frame",
+          "kind": "llm",
+          "stack": "YOLO11-small"
+        },
+        {
+          "label": "Tracker",
+          "note": "follows a cow inside one clip",
+          "kind": "code",
+          "stack": "ByteTrack"
+        },
+        {
+          "label": "Behavior rules",
+          "note": "lying, standing, walking, feeding",
+          "kind": "code",
+          "stack": "box geometry"
+        },
+        {
+          "label": "Herd signal",
+          "note": "share of time, hour by hour",
+          "kind": "out"
+        }
+      ]
+    },
+    "close": {
+      "credits": []
+    }
+  },
+  "shots": [
+    {
+      "id": "hook",
+      "kind": "card",
+      "say": "Ten Angus cows. Two days. Three cameras. One thousand seven hundred forty-nine clips."
+    },
+    {
+      "id": "pipeline",
+      "kind": "app",
+      "say": "We built a vision pipeline that watches the pen around the clock, detects what each cow is doing, and looks for the early signs of respiratory disease.",
+      "do": [
+        {
+          "goto": "/docs/visualization.html"
+        },
+        {
+          "wait": 500
+        },
+        {
+          "cut": true
+        },
+        {
+          "focus": {
+            "sel": "section:nth-of-type(2)",
+            "pad": 200,
+            "max": 1.6,
+            "ms": 1200
+          }
+        },
+        {
+          "wait": 4600
+        },
+        {
+          "focus": null
+        },
+        {
+          "scroll": {
+            "to": 1100,
+            "ms": 1000
+          }
+        },
+        {
+          "focus": {
+            "sel": "section:nth-of-type(4) svg",
+            "pad": 120,
+            "max": 1.7,
+            "ms": 1000
+          }
+        }
+      ]
+    },
+    {
+      "id": "found",
+      "kind": "app",
+      "say": "Here's what it found.",
+      "do": [
+        {
+          "hover": "section:nth-of-type(4) svg"
+        }
+      ]
+    },
+    {
+      "id": "drop",
+      "kind": "app",
+      "say": "On day two, feeding fell sharply at midday — at one PM, from twenty-seven percent to under one percent — while lying time rose.",
+      "do": [
+        {
+          "focus": null
+        },
+        {
+          "scroll": {
+            "to": "bottom",
+            "ms": 900
+          }
+        },
+        {
+          "focus": {
+            "sel": "section:nth-of-type(5) svg",
+            "pad": 110,
+            "max": 1.7,
+            "ms": 900
+          }
+        },
+        {
+          "wait": 2600
+        },
+        {
+          "hover": "section:nth-of-type(5) svg rect[x=\"360.8\"]"
+        },
+        {
+          "focus": {
+            "sel": "section:nth-of-type(5) svg rect[x=\"360.8\"]",
+            "pad": 230,
+            "max": 1.7,
+            "ms": 1100
+          }
+        }
+      ]
+    },
+    {
+      "id": "pattern",
+      "kind": "app",
+      "say": "Less eating, more lying. That's a pattern a veterinarian would investigate first.",
+      "do": [
+        {
+          "focus": {
+            "sel": "section:nth-of-type(4) table",
+            "pad": 260,
+            "max": 1.6,
+            "ms": 1100
+          }
+        }
+      ]
+    },
+    {
+      "id": "honest",
+      "kind": "app",
+      "say": "We could not identify individual cows across clips, so we report the herd signal honestly instead of inventing a ranking.",
+      "do": [
+        {
+          "focus": null
+        },
+        {
+          "goto": {
+            "to": "/challenge2-video/app/tracklets.html",
+            "hard": true
+          }
+        },
+        {
+          "wait": 500
+        },
+        {
+          "cut": true
+        },
+        {
+          "focus": {
+            "sel": "#tracklets",
+            "pad": 70,
+            "max": 1.5,
+            "ms": 1000
+          }
+        },
+        {
+          "wait": 3200
+        },
+        {
+          "focus": {
+            "sel": "section.warn",
+            "pad": 150,
+            "max": 1.7,
+            "ms": 1000
+          }
+        }
+      ]
+    },
+    {
+      "id": "arch",
+      "kind": "card",
+      "say": "All of it ran on a single laptop, no cloud."
+    },
+    {
+      "id": "close",
+      "kind": "card",
+      "say": "The full evidence is in the technical brief and the repository."
+    }
+  ]
+}
